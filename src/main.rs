@@ -182,7 +182,8 @@ fn ownership_rules() {
 #[test]
 fn data_copy() {
     let a = 10;
-    let b = a; // a dicopy ke b, a masih ada
+    let b = a;
+    // a dicopy ke b, a masih ada
 
     println!("{b}");
 }
@@ -190,7 +191,8 @@ fn data_copy() {
 #[test]
 fn ownership_movement() {
     let name1: String = String::from("Heyaa");
-    let name2: String = name1; // kepemilikan name1 dipindah ke name2
+    let name2: String = name1;
+    // kepemilikan name1 dipindah ke name2
 
     println!("{name2}");
 }
@@ -283,4 +285,18 @@ fn array_iter_for_loop() {
     for i in 0..array.len() {
         println!("{i}");
     }
+}
+
+fn say_hello() {
+    println!("Meoww!!");
+}
+
+fn say_goodbye(name: &str) {
+    println!("Goodbye {name}");
+}
+
+#[test]
+fn test_say_hello() {
+    say_hello();
+    say_goodbye("Doe");
 }
