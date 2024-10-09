@@ -1,5 +1,3 @@
-use std::char;
-
 fn main() {
     println!("Hello, world!");
 }
@@ -152,4 +150,39 @@ fn variable_scope() {
     }
 
     println!("{var}");
+}
+
+#[test]
+fn string_type() {
+    let mut name: String = String::from("Doe");
+    println!("{name}");
+
+    name.push_str(" Dua");
+    println!("{name}");
+
+    let new_name = name.replace("Dua", "Dor");
+    println!("{new_name}");
+}
+
+#[test]
+fn ownership_rules() {
+    // a belum bisa diakses
+    let a = 12;
+    // a bisa diakses
+
+    {
+        let b = 10;
+        // b bisa diakses dari sini
+        println!("{b}");
+    } // b menghilang disini
+
+    println!("{a}");
+} // a menghilang dari sini
+
+#[test]
+fn data_copy() {
+    let a = 10;
+    let b = a; // a dicopy ke b, a masih ada
+
+    println!("{b}");
 }
