@@ -186,3 +186,11 @@ fn data_copy() {
 
     println!("{b}");
 }
+
+#[test]
+fn ownership_movement() {
+    let name1: String = String::from("Heyaa");
+    let name2: String = name1; // kepemilikan name1 dipindah ke name2
+
+    println!("{name2}");
+}
