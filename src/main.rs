@@ -200,5 +200,19 @@ fn heap_copy() {
     let name1: String = String::from("Daaa");
     let name2: String = name1.clone();
 
-    println!("{name1} {name2}");
+    println!("{name1 } {name2}");
+}
+
+#[test]
+fn if_expr() {
+    let v = 12;
+    let n: &str = if v <= 10 {
+        "Good"
+    } else if v == 11 {
+        "Not Bad"
+    } else {
+        "Bad"
+    };
+
+    println!("{n}");
 }
