@@ -300,3 +300,23 @@ fn test_say_hello() {
     say_hello();
     say_goodbye("Doe");
 }
+
+fn factorial(n: i32) -> i32 {
+    if n < 1 {
+        return 0;
+    }
+
+    let mut result: i32 = 1;
+
+    for i in 1..=n {
+        result *= i;
+    }
+
+    result
+}
+
+#[test]
+fn test_factorial() {
+    let result: i32 = factorial(5);
+    println!("{result}");
+}
