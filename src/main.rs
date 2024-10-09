@@ -136,10 +136,20 @@ fn array_type() {
     println!("{:?}", array_mut);
 }
 
-const MOENIMUM: i32 = 12;
-
 #[test]
 fn constant_type() {
+    const MOENIMUM: i32 = 12;
     println!("{MOENIMUM}");
 }
 
+#[test]
+fn variable_scope() {
+    let var = 1;
+
+    {
+        let name = "Anu";
+        println!("{name}");
+    }
+
+    println!("{var}");
+}
