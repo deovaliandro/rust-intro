@@ -59,3 +59,21 @@ fn number_conversion() {
     let d: i16 = c as i16;
     println!("{d}");
 }
+
+#[test]
+fn number_operation() {
+    let a: i8 = 1;
+    let b: i8 = 2;
+    let c: i8 = 3;
+
+    let add: i8 = a + b + c;
+    let div: f32 = (c as f32) / b as f32;
+    // etc
+
+    println!("{add}");
+    println!("{div}");
+
+    let mut e = 12;
+    e += 12;
+    
+}
