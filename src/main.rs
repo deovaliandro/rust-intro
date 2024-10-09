@@ -73,7 +73,7 @@ fn number_operation() {
     println!("{add}");
     println!("{div}");
 
-    let mut e = 12;
+    let mut e: i8 = 12;
     e += 12;
-    
+    println!("{e}");
 }
