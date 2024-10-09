@@ -271,3 +271,16 @@ fn while_loop() {
         println!("{c}");
     }
 }
+
+#[test]
+fn array_iter_for_loop() {
+    let array: [&str; 2] = ["Kal", "Leo"];
+
+    for i in array {
+        println!("{i}");
+    }
+
+    for i in 0..array.len(); {
+        println!("{i}");
+    }
+}
