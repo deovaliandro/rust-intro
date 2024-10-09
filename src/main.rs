@@ -2,7 +2,6 @@ fn main() {
     println!("Hello, world!");
 }
 
-
 #[test]
 fn unit_test() {
     println!("Hello unit test rust");
