@@ -194,3 +194,11 @@ fn ownership_movement() {
 
     println!("{name2}");
 }
+
+#[test]
+fn heap_copy() {
+    let name1: String = String::from("Daaa");
+    let name2: String = name1.clone();
+
+    println!("{name1} {name2}");
+}
