@@ -315,8 +315,19 @@ fn factorial(n: i32) -> i32 {
     result
 }
 
+fn factorial_recursive(n: i32) -> i32 {
+    if n == 1 {
+        return 1;
+    }
+
+    n * factorial_recursive(n - 1)
+}
+
 #[test]
 fn test_factorial() {
     let result: i32 = factorial(5);
-    println!("{result}");
+    println!("Faktorial biasa = {result}");
+
+    let result: i32 = factorial_recursive(5);
+    println!("Faktorial rekursif = {result}");
 }
