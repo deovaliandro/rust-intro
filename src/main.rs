@@ -262,3 +262,12 @@ fn loop_label() {
 
     println!("{c}");
 }
+
+#[test]
+fn while_loop() {
+    let mut c = 0;
+    while c <= 10 {
+        c+=1;
+        println!("{c}");
+    }
+}
