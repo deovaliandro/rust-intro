@@ -85,3 +85,15 @@ fn bool() {
 
     println!("{} {}", !a, b);
 }
+
+#[test]
+fn comparison() {
+    let firs_number: i8 = 12;
+    let second_number: i8 = 9;
+
+    let comp: bool = firs_number > second_number;
+    println!("{comp}");
+
+    let sec_comp: bool = true && true;
+    println!("{sec_comp}");
+}
