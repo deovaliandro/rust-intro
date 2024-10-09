@@ -1,3 +1,5 @@
+use std::char;
+
 fn main() {
     println!("Hello, world!");
 }
@@ -96,4 +98,10 @@ fn comparison() {
 
     let sec_comp: bool = true && true;
     println!("{sec_comp}");
+}
+
+#[test]
+fn char() {
+    let c1: char = 'a';
+    println!("{c1}");
 }
