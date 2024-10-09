@@ -135,3 +135,11 @@ fn array_type() {
     array_mut[1] = 10;
     println!("{:?}", array_mut);
 }
+
+const MOENIMUM: i32 = 12;
+
+#[test]
+fn constant_type() {
+    println!("{MOENIMUM}");
+}
+
