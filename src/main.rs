@@ -46,3 +46,19 @@ fn number() {
     println!("MAX i32 = {j}");
     println!("MAX f32 = {k}");
 }
+
+#[test]
+fn number_conversion() {
+    let a: i8 = 10;
+    println!("{a}");
+
+    let b: i32 = a as i32;
+    println!("{b}");
+
+    let c: i32 = i32::MAX;
+    println!("{c}");
+
+    // Integer Overflow
+    let d: i16 = c as i16;
+    println!("{d}");
+}
