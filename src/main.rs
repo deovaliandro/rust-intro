@@ -77,3 +77,11 @@ fn number_operation() {
     e += 12;
     println!("{e}");
 }
+
+#[test]
+fn bool() {
+    let a: bool = true;
+    let b: bool = false;
+
+    println!("{} {}", !a, b);
+}
