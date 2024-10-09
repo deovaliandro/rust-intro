@@ -1,6 +1,3 @@
-use core::f32;
-use std::i32;
-
 fn main() {
     println!("Hello, world!");
 }
