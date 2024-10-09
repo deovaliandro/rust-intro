@@ -121,3 +121,17 @@ fn tuple_type() {
 
     println!("{d_0}, {d_1}, {d_2}");
 }
+
+#[test]
+fn array_type() {
+    let array: [i32; 3] = [1, 2, 3];
+    println!("{:?}", array);
+
+    let a = array[2];
+    println!("{a}");
+
+    // mutable array
+    let mut array_mut: [i32; 3] = [1, 2, 3];
+    array_mut[1] = 10;
+    println!("{:?}", array_mut);
+}
