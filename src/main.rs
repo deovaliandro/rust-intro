@@ -10,13 +10,13 @@ fn unit_test() {
 }
 
 #[test]
-fn variable_test() {
+fn variable() {
     let name: &str = "Deo";
     println!("{name}");
 }
 
 #[test]
-fn mut_variable_test() {
+fn variable_mut() {
     let mut name: &str = "Ini pertama";
     println!("{name}");
 
@@ -27,7 +27,7 @@ fn mut_variable_test() {
 
 // shadowing tidak disarankan
 #[test]
-fn shadowing() {
+fn shadowing_variable() {
     let r0: i32 = 1;
     println!("{r0}");
 
@@ -36,7 +36,7 @@ fn shadowing() {
 }
 
 #[test]
-fn number() {
+fn number_type() {
     let i: u32 = u32::MAX;
     let j: i32 = i32::MAX;
     let k: f32 = f32::MAX;
@@ -81,7 +81,7 @@ fn number_operation() {
 }
 
 #[test]
-fn bool() {
+fn bool_type() {
     let a: bool = true;
     let b: bool = false;
 
@@ -101,7 +101,12 @@ fn comparison() {
 }
 
 #[test]
-fn char() {
+fn char_type() {
     let c1: char = 'a';
     println!("{c1}");
+}
+
+#[test]
+fn tuple_type() {
+
 }
