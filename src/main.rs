@@ -216,3 +216,19 @@ fn if_expr() {
 
     println!("{n}");
 }
+
+#[test]
+fn loop_expr() {
+    let mut c = 0;
+    loop {
+        c+=1;
+
+        if c > 10 {
+            break;
+        } else if c % 2 == 0 {
+            continue;
+        }
+
+        println!("{c}");
+    }
+}
