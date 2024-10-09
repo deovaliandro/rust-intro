@@ -232,3 +232,19 @@ fn loop_expr() {
         println!("{c}");
     }
 }
+
+#[test]
+fn loop_expr_return() {
+    let mut c: i32 = 0;
+    let result = loop {
+        c += 1;
+
+        if c > 10 {
+            break c;
+        } else if c % 2 == 0 {
+            break c;
+        }
+    };
+
+    println!("{result}");
+}
