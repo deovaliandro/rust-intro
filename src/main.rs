@@ -108,5 +108,16 @@ fn char_type() {
 
 #[test]
 fn tuple_type() {
+    let data: (i32, f32, &str) = (10, 3.14, "Hi");
+    println!("{:?}", data);
 
+    // bongkar 1 per 1
+    // let d_0: i32 = data.0;
+    // let d_1: f32 = data.1;
+    // let d_2: &str = data.2;
+
+    // desctruction
+    let (d_0, d_1, d_2) = data;
+
+    println!("{d_0}, {d_1}, {d_2}");
 }
