@@ -248,3 +248,17 @@ fn loop_expr_return() {
 
     println!("{result}");
 }
+
+#[test]
+fn loop_label() {
+    let mut c: i32 = 0;
+    'kesini: loop {
+        c += 1;
+
+        if c > 10 {
+            break 'kesini;
+        }
+    };
+
+    println!("{c}");
+}
