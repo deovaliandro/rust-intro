@@ -280,7 +280,7 @@ fn array_iter_for_loop() {
         println!("{i}");
     }
 
-    for i in 0..array.len(); {
+    for i in 0..array.len() {
         println!("{i}");
     }
 }
