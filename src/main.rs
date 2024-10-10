@@ -331,3 +331,26 @@ fn test_factorial() {
     let result: i32 = factorial_recursive(5);
     println!("Faktorial rekursif = {result}");
 }
+
+fn print_n(n: i32) {
+    println!("Number = {n}");
+}
+
+fn hi(name: String) {
+    println!("Hi, {name}");
+}
+
+#[test]
+fn test_hi() {
+    let n = 8;
+    print_n(n);
+    println!("{n}");
+    // data masih ada kerena di stack
+    // sehingga data yang dikirim hanya clone
+
+    let name: String = String::from("Lena");
+    hi(name);
+    // println!("{name}");
+    // error karena datanya di heap
+    // sehingga data yang dikirim berupa referensi
+}
