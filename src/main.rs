@@ -383,3 +383,14 @@ fn test_reference_full_name() {
     let full_name: String = reference_full_name(&fname, &lname);
     println!("{full_name}");
 }
+
+fn change_valu(value: &mut String) {
+    value.push_str("Ini ditambahkan");
+}
+
+#[test]
+fn test_change_value() {
+    let mut value = String::from("Ini pertama");
+    change_valu(&mut value);
+    println!("{value}");
+}
