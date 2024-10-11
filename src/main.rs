@@ -394,3 +394,10 @@ fn test_change_value() {
     change_valu(&mut value);
     println!("{value}");
 }
+
+#[test]
+fn slice_reference() {
+    let array: [i32; 10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let slice1: &[i32] = &array[0..=1];
+    println!("{:?}", slice1);
+}
