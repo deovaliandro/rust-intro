@@ -223,7 +223,7 @@ fn if_expr() {
 fn loop_expr() {
     let mut c = 0;
     loop {
-        c+=1;
+        c += 1;
 
         if c > 10 {
             break;
@@ -260,7 +260,7 @@ fn loop_label() {
         if c > 10 {
             break 'kesini;
         }
-    };
+    }
 
     println!("{c}");
 }
@@ -269,7 +269,7 @@ fn loop_label() {
 fn while_loop() {
     let mut c = 0;
     while c <= 10 {
-        c+=1;
+        c += 1;
         println!("{c}");
     }
 }
@@ -355,8 +355,7 @@ fn test_hi() {
     // sehingga data yang dikirim berupa referensi
 }
 
-fn full_name(fname: String, lname: String)
-        -> (String, String, String) {
+fn full_name(fname: String, lname: String) -> (String, String, String) {
     let full_name: String = format!("{}, {}", fname, lname);
     (fname, lname, full_name)
 }
@@ -370,4 +369,17 @@ fn test_full_name_return_ownership() {
     println!("{name}");
     println!("{a}");
     println!("{b}");
+}
+
+fn reference_full_name(first_name: &String, last_name: &String) -> String {
+    return format!("{first_name} {last_name}");
+}
+
+#[test]
+fn test_reference_full_name() {
+    let fname: String = String::from("Kia");
+    let lname: String = String::from("Leona");
+
+    let full_name: String = reference_full_name(&fname, &lname);
+    println!("{full_name}");
 }
