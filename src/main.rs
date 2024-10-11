@@ -401,3 +401,22 @@ fn slice_reference() {
     let slice1: &[i32] = &array[0..=1];
     println!("{:?}", slice1);
 }
+
+struct Person {
+    first_name: String,
+    last_name: String,
+    age: u8,
+}
+
+#[test]
+fn struct_person() {
+    let person: Person = Person {
+        first_name : String::from("Modia"),
+        last_name : String::from("Kahe"),
+        age : 12,
+    };
+
+    println!("{}", person.first_name);
+    println!("{}", person.last_name);
+    println!("{}", person.age);
+}
