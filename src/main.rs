@@ -354,3 +354,20 @@ fn test_hi() {
     // error karena datanya di heap
     // sehingga data yang dikirim berupa referensi
 }
+
+fn full_name(fname: String, lname: String)
+        -> (String, String, String) {
+    let full_name: String = format!("{}, {}", fname, lname);
+    (fname, lname, full_name)
+}
+
+#[test]
+fn test_full_name_return_ownership() {
+    let fname: String = String::from("John");
+    let lname: String = String::from("Doe");
+
+    let (a, b, name) = full_name(fname, lname);
+    println!("{name}");
+    println!("{a}");
+    println!("{b}");
+}
