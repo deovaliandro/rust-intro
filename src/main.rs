@@ -380,7 +380,8 @@ fn test_reference_full_name() {
     let fname: String = String::from("Kia");
     let lname: String = String::from("Leona");
 
-    let full_name: String = reference_full_name(&fname, &lname);
+    let full_name: String =
+        reference_full_name(&fname, &lname);
     println!("{full_name}");
 }
 
@@ -408,6 +409,11 @@ struct Person {
     age: u8,
 }
 
+fn print_person_struct(person: &Person) {
+    println!("Name = {} {}, age = {}",
+        person.first_name, person.last_name, person.age);
+}
+
 #[test]
 fn struct_person() {
     let person: Person = Person {
@@ -416,7 +422,5 @@ fn struct_person() {
         age : 12,
     };
 
-    println!("{}", person.first_name);
-    println!("{}", person.last_name);
-    println!("{}", person.age);
+    print_person_struct(&person);
 }
