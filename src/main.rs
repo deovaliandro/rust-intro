@@ -431,3 +431,11 @@ fn struct_person() {
     print_person_struct(&person);
     print_person_struct(&person2);
 }
+
+struct GeoPoint(f64, f64);
+
+#[test]
+fn tuple_struct() {
+    let geo_point: GeoPoint = GeoPoint(-6.99888, 12.0000);
+    println!("{:.2} - {:.2}", geo_point.0, geo_point.1);
+}
