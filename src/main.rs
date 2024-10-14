@@ -417,10 +417,17 @@ fn print_person_struct(person: &Person) {
 #[test]
 fn struct_person() {
     let person: Person = Person {
-        first_name : String::from("Modia"),
-        last_name : String::from("Kahe"),
-        age : 12,
+        first_name: String::from("Modia"),
+        last_name: String::from("Kahe"),
+        age: 12,
+    };
+
+    let person2: Person = Person {
+        first_name: person.first_name.clone(),
+        last_name: person.last_name.clone(),
+        ..person
     };
 
     print_person_struct(&person);
+    print_person_struct(&person2);
 }
