@@ -439,3 +439,33 @@ fn tuple_struct() {
     let geo_point: GeoPoint = GeoPoint(-6.99888, 12.0000);
     println!("{:.2} - {:.2}", geo_point.0, geo_point.1);
 }
+
+impl Person {
+    fn say_hello(&self, name: &str) {
+        println!("Hello {}, my name is {}", name, self.first_name);
+    }
+}
+
+#[test]
+fn test_method() {
+    let person: Person = Person {
+        first_name: String::from("Leon"),
+        last_name: String::from("Xo"),
+        age: 21,
+    };
+
+    person.say_hello("Yu");
+}
+
+impl GeoPoint {
+    fn new(long: f64, lat: f64) -> GeoPoint {
+        GeoPoint(long, lat)
+    }
+}
+
+#[test]
+fn test_associated_function() {
+    let geo_point: GeoPoint = GeoPoint::new(99.010, 108.221);
+    println!("long: {}", geo_point.0);
+    println!("lat: {}", geo_point.1);
+}
