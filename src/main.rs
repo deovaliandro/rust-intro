@@ -478,5 +478,25 @@ enum Level {
 
 #[test]
 fn test_enum() {
-    let _level: Level = Level::Regular;
+    let _level1: Level = Level::Regular;
+    let _level2: Level = Level::Premium;
+    let _level3: Level = Level::Platinum;
+}
+
+enum Payment {
+    CreditCard(String),
+    BankTransfer(String, String),
+    Ewallet(String, String),
+}
+
+impl Payment {
+    fn pay(&self, amount: u32) {
+        println!("Pay :: {amount}");
+    }
+}
+
+#[test]
+fn test_payment() {
+    let _payment1: Payment = Payment::CreditCard(String::from("12345678"));
+    _payment1.pay(200);
 }
