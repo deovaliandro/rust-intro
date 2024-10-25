@@ -469,3 +469,14 @@ fn test_associated_function() {
     println!("long: {}", geo_point.0);
     println!("lat: {}", geo_point.1);
 }
+
+enum Level {
+    Regular,
+    Premium,
+    Platinum,
+}
+
+#[test]
+fn test_enum() {
+    let _level: Level = Level::Regular;
+}
